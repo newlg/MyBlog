@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>task4</title>
+    <style media="screen">
+      li{
+        display:inline-block;
+        background-color: #cd4a48;
+        color: #f3f6f7;
+        font-size:20px;
+        text-align:center;
+        padding:5px;
+        margin:5px;
+        cursor:pointer;
+      }
+    </style>
   </head>
   <body>
     <input type="text" id="inputs" value="">
@@ -20,7 +32,7 @@
       var btnLeftOut = document.getElementById('btnLeftOut');
       var btnRightOut = document.getElementById('btnRightOut');
       var inputs = document.getElementById('inputs');
-      var list = document.getElementById('list');
+      var lists = document.getElementById('list');
 
 
 
@@ -37,9 +49,28 @@
           var oli = document.createElement('li');
           oli.innerHTML = inputs.value;
           if(direction === "left"){
-            inputs.inserBefore(oli,inputs.firstChild);
+            lists.insertBefore(oli,inputs.firstChild);
           }else{
-            list.appendChild(oli);
+            lists.appendChild(oli);
+          }
+        }
+      }
+
+      //删除
+      function del(node,direction){
+        if (lists.childNodes.length<=0) {
+          alert('不存在元素可以删除');
+          return false;
+
+        }else {
+          if (direction === 'left') {
+            alert('删除数字：'+lists.firstChild.innerText+"!");
+            lists.removeChild(lists.firstChild);
+          } else if(direction === 'right'){
+            alert('删除数字：'+lists.lastChild.innerText+"!");
+            lists.removeChild(lists.lastChild);
+          }else {
+            alert("删除数字："+lists.removeChild(node).innerText+'!');
           }
         }
       }
@@ -56,7 +87,9 @@
       btnRightOut.onclick =  function(){
       del(-1,"right");
       }
-
+      lists.oncick  = function(){
+        del(event.target);
+      }
 
     </script>
   </body>
