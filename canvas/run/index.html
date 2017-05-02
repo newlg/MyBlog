@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas</title>
+		<style>
+			canvas{border:1px solid #ccc}
+		</style>
+	</head>
+	<body>
+		<canvas width="800" height="600" id="mycanvas">您的浏览器不支持canvas,请更换浏览器</canvas>
+		<script>
+
+			/*定义一个兼容各个浏览器的 requestAnimationFrame*/
+			if(!window.requestAnimationFrame){
+				window.requestAnimationFrame=window.webkitRequestAnimationFrame ||
+					window.mozRequestAnimationFrame ||
+					window.msRequestAnimationFrame ||
+					window.oRequestAnimationFrame ||
+					function(callback){
+					return window.setTimeout(callback,1000/60);
+				}
+
+			}
+
+
+			var mycanvas=document.getElementById("mycanvas");
+			var con=mycanvas.getContext("2d");
+
+			function CreateQiu(x,y,vx,vy){
+				this.x = x||0;
+				this.y = y||0;
+				this.vx = vx||0;
+				this.vy = vy||0;
+			
+				this.run =function(){
+					con.beginPath();
+					con.fillStyle = "purple";
+					con.arc(this.x,this.y,20,0,2*Math.PI,true);
+					con.fill();
+					this.x+=this.vx;
+					this.y+=this.vy;
+				}
+			}
+			
+			var qiu1 = new CreateQiu(0,0,2,4);
+			var qiu2 = new CreateQiu(0,50,2,0);
+			var qiu3 = new CreateQiu(50,0,0,4);
+
+
+
+			(function drew(){
+				con.clearRect(0,0,mycanvas.width,mycanvas.height)
+
+				qiu1.run();
+				qiu2.run();
+				qiu3.run();
+				window.requestAnimationFrame(drew);
+			})();
+		</script>
+	</body>
+</html>

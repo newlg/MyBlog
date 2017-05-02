@@ -1,0 +1,71 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+
+*{padding:0px;margin:0px;}
+#ul{width:135px;height:27px; list-style:none;float:left;}
+
+#ul li {background:url('images/star.gif') no-repeat 0px 0px;width:27px;height:27px;float:left;}
+div{width:50px;height:27px;line-height:27px;float:left;text-align:center;color:red;}
+</style>
+
+
+<ul id = "ul">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+<div id= "div"></div>
+
+
+<script>
+var ulObj = document.getElementById('ul');
+var list = ulObj.getElementsByTagName('li');
+var divObj = document.getElementById('div');
+
+var mark = false;
+
+
+for(var i = 0;i < list.length; i++){
+  list[i].index = i;
+  list[i].onmouseover = function (){
+    if(!mark){
+      for(var i = 0;i < list.length;i++){
+        if(i<=this.index){
+          list[i].style.backgroundPosition = '0 -29px';
+        }
+
+      }
+
+    }
+
+}
+
+list[i].onclick = function(){
+if(!mark){
+  mark = true;
+  divObj.innerHTML = this.index+1+'星';
+}
+
+}
+
+}
+
+
+ulObj.onmouseout = function(){
+  if(!mark){
+    for(var i = 0;i < list.length;i++){
+      list[i].style.backgroundPosition = "0px 0px";
+    }
+
+  }
+
+
+
+
+
+}
+
+</script>

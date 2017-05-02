@@ -1,0 +1,182 @@
+/**{padding:0;margin:0}*/
+ul li{list-style:none;}
+/*a{text-de}*/
+
+.header{
+  padding:1px;
+}
+body{
+
+  font-family:"黑体";
+  font-size:14px;
+  margin:0px;
+  border:0px;
+  background:#dedede;
+  min-width:750px;
+}
+.header{
+  height:70px;
+  width:100%;
+  background:#333;
+  /*display: block;*/
+  /*vertical-align: middle;*/
+
+}
+
+.header span{
+  height:40px;
+  display:block;
+  /*margin-top:10px;*/
+  vertical-align: middle;
+  display:table;
+}
+.header span img{
+  margin-left:35px;
+  cursor:pointer;
+  margin-top:10px;
+
+}
+
+nav ul{
+
+  float:right;
+  margin:0px;
+  padding:0px;
+
+}
+nav li {
+
+  line-height:70px;
+  float:left;
+  margin-right:20px;
+  /*这里不需要s*/
+  margin-top:-50px;
+}
+
+nav ul li a{
+
+  color:#fff;
+  text-decoration:none;
+}
+nav ul li a:hover{
+
+  color:gray;
+
+}
+
+article{
+  margin-top:40px;
+  background-color:#fff;
+  margin-left:40px;
+  margin-right:450px;
+  padding:20px;
+  line-height:1.5;
+  margin-bottom:20px;
+
+}
+.color_gray{
+  color:gray;
+}
+.text_indent{
+  text-indent: 2em;
+}
+
+figure{
+  height:120px;
+  width: 200px;
+  border: 1px solid #aaa;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+figcaption{
+  padding:2px;
+}
+table{
+  width:100%;
+  margin: 0 auto;
+  border-color:#ccc;
+  border-collapse:collapse;
+
+}
+thead{
+  color:white;
+  background:#333;
+}
+
+aside{
+
+  background:#fff;
+  float:right;
+  width:350px;
+  margin-top:40px;
+  margin-right:20px;
+  padding:20px;
+}
+form{
+  width:100%;
+  min-width:300px;
+}
+form>div{
+  margin:10px 0;
+}
+.bot{
+  vertical-align:bottom;
+}
+.input_message{
+  width:30%;
+  text-align:right;
+  display:inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+  vertical-align: top;
+  margin-bottom: 0px;
+
+}
+.input_messages{
+  width:30%;
+  text-align:center;
+  display:inline-block;
+  margin-right:10px;
+  margin-top:10px;
+
+
+}
+.demand{
+  font-size:13px;
+  color:gray;
+  margin-left:38%;
+  margin-top:10px;
+
+}
+textarea{
+
+  margin-top:10px;
+  width:50%;
+  height:100px;
+  /*margin-left:-7px;*/
+
+}
+input[type='submit']{
+
+  width:80%;
+  height:40px;
+  background:blue;
+  color:#fff;
+  cursor:pointer;
+  border-radius:10px;
+  border:1px solid blue;
+  margin-left:20%;
+}
+footer{
+  width:100%;
+  height:70px;
+  text-align:center;
+  background-color:#000;
+  color:#fff;
+  line-height:70px;
+  font-weight:500;
+  font-size:14px;
+}

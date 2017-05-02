@@ -1,0 +1,111 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+ul{list-style:none;}
+ul li{height:30px;}
+.ok{background:url('images/ok.gif') no-repeat;padding-left:20px;margin-left:10px;color:green;}
+.no{background:url('images/no.gif') no-repeat;padding-left:20px;margin-left:10px;color:red;}
+.mo{background:url('images/mo.gif') no-repeat;padding-left:20px;margin-left:10px;color:#888;}
+
+</style>
+
+<form action="1.php" onsubmit="return test()">
+<ul>
+  <li>账户: <input id = "userName" type="text"><span id = "userInfo"></span></li>
+  <li>年龄：<input id  ="age" type="text"><span id = "ageInfo"></span></li>
+  <li>邮箱：<input id = "email" type = "text"><span id = "myEmailInfo"></span></li>
+
+  <li><input type="submit"></li>
+</ul>
+
+</form>
+
+<script>
+
+function test(){
+  var res1 = user.onblur();
+  var res2 = Age.onblur();
+  var res3 = myEmail.onblur();
+  if(res1 && res2 && res3)
+  {
+    return true;
+  }else{
+    return false;
+  }
+
+}
+
+
+//账户
+  var user = document.getElementById('userName');
+  var userInfo = document.getElementById('userInfo');
+
+  user.onfocus = function(){
+    userInfo.className = 'mo';
+    userInfo.innerHTML = "不以数字开头的和下划线开头"
+
+  }
+  user.onblur = function(){
+
+    if(user.value.match(/^[A-z]{3,8}$/)){
+      userInfo.className = 'ok';
+      userInfo.innerHTML = '输入正确';
+      return true;
+
+    }else{
+
+      userInfo.className = 'no';
+      userInfo.innerHTML = '输入有误！！！'
+      return false;
+    }
+  }
+
+//  年龄：
+
+ var Age = document.getElementById('age');
+ var ageInfo = document.getElementById('ageInfo');
+
+ Age.onfocus = function(){
+   ageInfo.className = 'mo';
+   ageInfo.innerHTML = '请输入0-150的数字';
+
+ }
+
+ Age.onblur = function(){
+   if(Age.value.match(/^\d+$/) && Age.value > 0 && Age.value < 150){
+     ageInfo.className = 'ok';
+     ageInfo.innerHTML = '输入正确';
+     return true;
+
+   }else{
+     ageInfo.className = 'no';
+     ageInfo.innerHTML = '输入错误';
+     return false;
+   }
+
+ }
+//邮箱
+
+var myEmail = document.getElementById('email');
+var myEmailInfo = document.getElementById('myEmailInfo');
+myEmail.onfocus = function(){
+  myEmailInfo.className = 'mo';
+  myEmailInfo.innerHTML = '请输入邮箱！';
+
+}
+
+myEmail.onblur = function(){
+
+  if(myEmail.value.match(/^[A-z0-9]+@[A-z0-9]+\.[A-z]+$/)){
+    myEmailInfo.className = 'ok';
+    myEmailInfo.innerHTML = '输入正确';
+    return true;
+
+  }else{
+    myEmailInfo.className = 'no';
+    myEmailInfo.innerHTML = '格式错误';
+    return false;
+  }
+}
+
+</script>

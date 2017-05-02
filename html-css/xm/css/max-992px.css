@@ -1,0 +1,10 @@
+@media (max-width:992px){
+.body{padding: 0 1%;}
+.body .conten .main .right div{width: 32%;height: 300px;text-align: center;padding:25px 0 ; margin:0 2% 0 0;}
+.body .conten .right div:nth-child(3){margin: 0 }
+.body .conten .main .right div:nth-child(4){margin-right: 2%;}
+
+
+
+
+}

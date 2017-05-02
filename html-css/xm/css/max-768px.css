@@ -1,0 +1,12 @@
+@media (max-width:768px){
+ .top-2 .main{display: none;}
+.top-1 .le{display: none;}
+.body .content .bottom .left li{width: 32.8%;}
+.body .content .bottom .right div{width: 100%;margin:0px 0 0 0; }
+.body .content .bottom .right div:nth-child(2){margin:0px 0 0 0;}
+.body .conten .main .right div{background: #FAFAFA;width: 100%;text-align: center;padding:15px; margin: 0;}
+.body .conten .main .right div:nth-child(4){margin-right: 0;}
+.body .biaoti{height: 50px;line-height: 50px;}
+.body .biaoti p{font-size: 20px;}
+.b2{margin: 0;}
+}

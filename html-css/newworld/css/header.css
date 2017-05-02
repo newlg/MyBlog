@@ -1,0 +1,51 @@
+#header{
+  width:100%;
+  height:57px;
+  line-height: 57px;
+  background-color: white;
+  border-bottom: 1px solid #E6E6E6;
+}
+#header .logo{
+  margin-left:60px;
+  font-size: 21px;
+  font-family: "黑体";
+  text-indent: 42px;
+  background:url(../img/logo.png) left center no-repeat;
+}
+#header .nav li{
+  width:65px;
+  height:100%;
+  text-align: center;
+  display: inline-block;
+}
+#header .nav li:hover a{
+  color: black;
+}
+#header .login_btn{
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color:#E34F52;
+  text-indent: 19px;
+  background: url(../img/user_icon.png) left center no-repeat;
+  margin-right:67px;
+}
+#header .nav{
+  height:100%;
+  margin-right: 37px;
+}
+#header .nav li a{
+  font-size: 14px;
+  font-family:"微软雅黑";
+  color:#7C7A82;
+  transition: all 0.5s;
+
+}
+.active{
+  border-bottom: 5px solid #E34E52;
+}
+#header .nav .active a{
+  color:#E34E52;
+}
+#header .nav li{
+  margin-left: 44px;
+}

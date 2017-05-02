@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{border: 1px solid green; margin: 0 auto; background:#FFF;display:block;}
+		body{background:pink;}
+
+	</style>
+</head>
+<body>
+	<canvas id="mycanvas" width="600" height="600">
+		你的浏览器不支持 canvas 标签
+	</canvas>
+	<script>
+		// 获取 canvas 对象
+		var Canvas = document.getElementById('mycanvas');
+		// 获取一个 2d 绘制环境
+		var cxt = Canvas.getContext('2d');
+
+
+		Canvas.onmousemove = function(event){
+			var e = window.event || event;
+			// 获取canvas 的位置
+			var loc = winToCanvas(Canvas,e.clientX,e.clientY);
+
+			// 清空画布的所有的内容
+			cxt.clearRect(0,0,Canvas.width,Canvas.height);
+
+			// 水平轴线
+			cxt.beginPath();
+			cxt.moveTo(0,loc.y);
+			cxt.lineTo(Canvas.width,loc.y);
+			cxt.stroke();
+
+			// 垂直轴线
+			cxt.beginPath();
+			cxt.moveTo(loc.x,0);
+			cxt.lineTo(loc.x,Canvas.height);
+			cxt.stroke();
+
+			// 把当前 canvas 坐标 写到画布上
+			cxt.strokeText('x:'+loc.x+' y:'+loc.y,(loc.x+5),(loc.y-5));
+		}
+
+		// 获取 canvas 的坐标。
+		function winToCanvas(canvas,x,y){
+			// 获取 canvas 对象的 相关 位置的信息
+			var box = canvas.getBoundingClientRect();
+			var canvasX = parseInt(x - box.left);
+			var canvasY = parseInt(y - box.top);
+			// alert('x:'+canvasX+'-- y:'+canvasY);
+			return {x:canvasX,y:canvasY};
+		}
+
+
+	</script>
+</body>
+</html>

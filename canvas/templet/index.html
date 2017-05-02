@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{border: 1px solid green; background:#000;}
+		body{}
+
+
+	</style>
+</head>
+<body>
+	<canvas id="mycanvas" width="1200" height="600">
+		你的浏览器不支持 canvas 标签
+	</canvas>
+	<script>
+		// 获取 canvas 对象
+		var Canvas = document.getElementById('mycanvas');
+		// 获取一个 2d 绘制环境
+		var cxt = Canvas.getContext('2d');
+
+		// 绑定一个事件
+		Canvas.addEventListener('mousemove', change, false);
+
+		function change(e){
+
+			// console.log('a');
+			// 清除画布
+			cxt.clearRect(0,0,Canvas.width,Canvas.height);
+
+			var loc = winToCanvas(Canvas,e.clientX,e.clientY)
+
+			// 保存状态
+			cxt.save();
+
+			// 剪辑的路径
+			cxt.beginPath();
+			cxt.arc(loc.x,loc.y,100,0,Math.PI/180*360,false);
+			cxt.clip();
+
+			cxt.fillStyle = '#C1C1BF';
+			cxt.fillRect(0,0,Canvas.width,Canvas.height);
+
+			cxt.fillStyle = '#FFF';
+			cxt.font = '180px 微软雅黑';
+			cxt.textAlign = 'center';
+			cxt.fillText('前端工程师！',Canvas.width/2,Canvas.height/2);
+
+			// 恢复到保存前状态
+			cxt.restore();
+		}
+
+
+
+
+
+
+
+		// 获取 canvas 的坐标。
+		function winToCanvas(canvas,x,y){
+			// 获取 canvas 对象的 相关 位置的信息
+			var box = canvas.getBoundingClientRect();
+
+			var canvasX = parseInt(x - box.left);
+			var canvasY = parseInt(y - box.top);
+			// alert('x:'+canvasX+'-- y:'+canvasY);
+
+			return {x:canvasX,y:canvasY};
+		}
+
+
+
+	</script>
+</body>
+</html>

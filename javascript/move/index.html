@@ -1,0 +1,70 @@
+<!doctype html>
+<meta charset>
+<meta name="lg">
+<style>
+*{margin:0;padding:0}
+#wrap{
+  position:relative;width:500px;height:500px;
+  border:1px solid red;
+  margin:10px auto;
+}
+
+</style>
+<div id = "wrap">
+<img style="position:absolute;top:0px;left:0px;"id ="man" src="images/b1.gif" alt="">
+</div>
+<script>
+var Man = document.getElementById('man');
+     //w-87  s-83  a-65  d-68
+    //   38    40    37     39
+var speed = 5;
+document.onkeydown = function(event){
+
+  var evt = event || window.event;
+  // alert(evt.keyCode);
+  switch(evt.keyCode){
+    //w
+    case 38:
+    case 87:
+      Man.style.top = Math.max(0,Man.offsetTop-speed)+'px';
+      run('up1.gif','up2.gif');
+      break;
+      //s
+    case 83:
+    case 40:
+      Man.style.top = Math.min(468,Man.offsetTop+speed)+'px';
+      run('b1.gif','b2.gif');
+      break;
+
+    //a
+    case 65:
+    case 37:
+      Man.style.left = Math.max(Man.offsetLeft-speed,0)+'px';
+      run('l1.gif','l2.gif');
+      break;
+
+    //d
+    case 68:
+    case 39:
+      Man.style.left = Math.min(Man.offsetLeft+speed,468)+'px';
+      run('r1.gif','r2.gif');
+      break;
+
+  }
+}
+
+function run(img1,img2){
+  var newImg = Man.src.substr(Man.src.lastIndexOf('/')+1);
+
+  if(newImg == img1){
+    Man.src = 'images/'+img2;
+  }else{
+    Man.src = 'images/'+img1;
+  }
+
+
+}
+
+
+
+</script>

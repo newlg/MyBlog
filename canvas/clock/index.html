@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas</title>
+		<style>
+			canvas{border:1px solid #ccc}
+		</style>
+	</head>
+	<body>
+		<canvas width="800" height="600" id="mycanvas">您的浏览器不支持canvas,请更换浏览器</canvas>
+		<script>
+			var mycanvas=document.getElementById("mycanvas");
+			var con=mycanvas.getContext("2d");
+
+			function drew(){
+				var d = new Date();
+				var h = d.getHours();
+				var m = d.getMinutes();
+				var s = d.getSeconds(); 
+				
+				//清空画布
+				con.clearRect(0,0,mycanvas.width,mycanvas.height);
+
+
+
+				con.save();
+				con.translate(200,200);
+				con.strokeStyle = "gray";
+				con.lineWidth = 4;
+				//分钟刻度
+				for(var i=0;i<60;i++){
+					con.save();
+					con.rotate(2*Math.PI*i/60);
+					con.beginPath();
+					con.moveTo(0,-116);
+					con.lineTo(0,-130);
+					con.stroke();
+					con.restore();
+				}
+
+
+
+				con.strokeStyle="gold";
+				con.lineWidth = 10;
+				//小时刻度
+				for(var i=0;i<12;i++){
+					con.save();
+					con.rotate(2*Math.PI*i/12);
+					con.beginPath();
+					con.moveTo(0,-100);
+					con.lineTo(0,-130);
+					con.stroke();
+					con.restore();
+				}
+
+
+				//时针
+
+				con.save();
+				con.rotate(2*Math.PI*h/12+2*Math.PI*m/60/12);
+				con.strokeStyle = "#2884a9";
+				con.lineWidth = 8;
+				con.beginPath();
+				con.moveTo(0,16);
+				con.lineTo(0,-60);
+
+
+				con.stroke();
+				con.restore();
+
+				//分针
+				con.save();
+				con.rotate(2*Math.PI*m/60+2*Math.PI*s/60/60);
+				con.strokeStyle = "#2884a9";
+				con.lineWidth = 6;
+				con.beginPath();
+				con.moveTo(0,20);
+				con.lineTo(0,-80);
+				con.stroke();
+				con.restore();
+
+				//秒针
+				con.save();
+				con.rotate(2*Math.PI*s/60);
+				con.strokeStyle = "red";
+				con.lineWidth = 4;
+				con.beginPath();
+				con.moveTo(0,20);
+				con.lineTo(0,-90);
+				con.stroke();
+				con.restore();
+				
+				con.beginPath();
+				con.arc(0,0,6,0,2*Math.PI,true);
+				con.fill();
+				con.strokeStyle = "brown";
+				con.lineWidth = 2;
+				con.stroke();
+				
+
+				con.restore();
+			}
+
+			setInterval(drew,100)
+		</script>
+	</body>
+</html>

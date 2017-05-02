@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+*{padding:0;margin:0;}
+body{background:#000}
+#box{width:400px;height:250px;border:1px solid red;margin:50px auto; border-radius:50px;}
+
+#box #name{color:red;height:100px;line-height:150px;font-size:30px;text-align:center;}
+#box button{color:green;width:50px;height:45px;font-size:20px;background:yellow;margin:50px auto;display:block;}
+
+</style>
+
+<div id ="box">
+<div id="name">点击开始进行抽奖</div>
+<button id = "btn" onclick="show()">开始</button>
+</div>
+
+<script>
+var names = ['群主','管理员1','管理员2','管理员3','成员1','成员2','成员3','成员4','成员5','成员6'];
+
+var nameObj = document.getElementById('name');
+var btnObj =document.getElementById('btn');
+
+var timer;
+function show(){
+
+
+  if(btnObj.innerHTML =='开始'){
+    btnObj.innerHTML='结束';
+    timer = setInterval(function(){
+      nameObj.innerHTML = names[parseInt((Math.random()*1000)%names.length)];
+
+
+    },10);
+
+
+
+  }else{
+    btnObj.innerHTML ='开始';
+    clearInterval(timer);
+  }
+
+
+}
+
+
+</script>

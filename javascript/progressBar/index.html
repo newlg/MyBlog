@@ -1,0 +1,72 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+#wra{
+  width:400px;
+  height:20px;
+  border-radius:10px;
+  border:2px solid red;
+
+}
+
+#jd{
+  height:20px;
+  background:red;
+  border-radius:10px;
+
+
+}
+
+
+</style>
+<div id = "wra">
+
+<div style="width:0px;" id = "jd"></div>
+</div>
+<button onclick="star()">开始</button>
+<button onclick="stop()">暂定</button>
+<button onclick="out()">结束</button>
+<script>
+var jdObj = document.getElementById('jd');
+var i = 0;
+var mark = false;
+var timer;
+
+function run(){
+  if(i>100){
+    clearInterval(timer);
+    mark = false;
+
+  }else{
+    jdObj.style.width = i+'%';
+    i++;
+  }
+
+
+}
+
+function star(){
+
+  if(!mark){
+    mark = true;
+    timer = setInterval(run,30);
+  }
+}
+
+function stop(){
+
+   mark = false;
+
+  clearInterval(timer);
+}
+
+function out(){
+
+  i = 0;
+  jdObj.style.width = i+'%';
+  mark = false;
+  clearInterval(timer);
+
+}
+
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>task4</title>
+  </head>
+  <body>
+    <input type="text" id="inputs" value="">
+    <button type="button" id="btnLeftIn">左侧入</button>
+    <button type="button" id="btnRightIn">右侧入</button>
+    <button type="button" id="btnLeftOut">左侧出</button>
+    <button type="button" id="btnRightOut">右侧入</button>
+
+    <ul id="list">
+
+    </ul>
+    <script type="text/javascript">
+      var btnLeftIn = document.getElementById('btnLeftIn');
+      var btnRightIn = document.getElementById('btnRightIn');
+      var btnLeftOut = document.getElementById('btnLeftOut');
+      var btnRightOut = document.getElementById('btnRightOut');
+      var inputs = document.getElementById('inputs');
+      var list = document.getElementById('list');
+
+
+
+      // 插入数字
+      function insert(direction){
+        if(inputs.value == ""){
+          alert("请输入需要插入的值");
+           inputs.focus();
+        }else if (isNaN(inputs.value)) {
+          alert("只能是数字");
+          inputs.value = "";
+           inputs.focus();
+        }else {
+          var oli = document.createElement('li');
+          oli.innerHTML = inputs.value;
+          if(direction === "left"){
+            inputs.inserBefore(oli,inputs.firstChild);
+          }else{
+            list.appendChild(oli);
+          }
+        }
+      }
+
+      btnLeftIn.onclick =  function(){
+        insert("left");
+      }
+      btnRightIn.onclick =  function(){
+      insert("right");
+      }
+      btnLeftOut.onclick =  function(){
+      del(-1,"left");
+      }
+      btnRightOut.onclick =  function(){
+      del(-1,"right");
+      }
+
+
+    </script>
+  </body>
+
+</html>

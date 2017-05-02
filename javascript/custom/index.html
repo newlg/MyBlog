@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="lg">
+<style>
+*{margin:0px;padding:0px;}
+img{width:150px;height:150px;border-radius:50%;position:absolute;top:0;left:0;}
+
+</style>
+<img id = "img" src ="images/coust.jpg">
+<script>
+var imgObj = document.getElementById('img');
+
+var x = 0;
+var y = 0;
+
+var speedX = 5;
+var speedY = 5;
+setInterval(function(){
+
+  if(x > window.innerWidth-imgObj.offsetWidth || x < 0 ){
+    speedX = -speedX;
+  }
+  if(y > window.innerHeight-imgObj.offsetHeight || y < 0){
+    speedY = -speedY;
+  }
+  x += speedX;
+  y +=speedY;
+
+  imgObj.style.left = x + 'px';
+  imgObj.style.top = y + 'px';
+},20);
+
+</script>

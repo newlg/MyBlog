@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+
+    .border{border: 1px solid red;}
+    #play{width: 500px;height:300px;margin:10px auto;position: relative;}
+    #play ul{list-style:none;}
+    #play ul li{display:none;}
+    #play ul li img{width:500px;height:300px;}
+    #play ol{list-style:none;width:105px;height:26px;position: absolute;top:270px;left:200px;}
+    #play ol li{float:left;width:20px;height:20px;border-radius:50%;background:#000;text-align:center;line-height:20px;margin:3px;color:#FFF;}
+    #play #prev{font-size:30px;position: absolute;top:130px;left:10px;border:none;background:none;}
+    #play #next{font-size:30px;position: absolute;top:130px;left:460px;border:none;background:none;}
+  </style>
+</head>
+<body>
+  <div id="play">
+    <ul id="ul">
+      <li style="display: block;"><img src="images/0.jpg" alt=""></li>
+      <li><img src="images/1.jpg" alt=""></li>
+      <li><img src="images/2.jpg" alt=""></li>
+      <li><img src="images/3.jpg" alt=""></li>
+    </ul>
+    <ol id="ol">
+      <li index="0" style="background: green;">1</li>
+      <li index="1">2</li>
+      <li index="2">3</li>
+      <li index="3">4</li>
+    </ol>
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
+  </div>
+  <script>
+
+    // 获取所有的图片集合
+    var Imgs = document.getElementById('ul').getElementsByTagName('li');
+    var olObj= document.getElementById('ol').getElementsByTagName('li');
+    var Prev = document.getElementById('prev');
+    var Next = document.getElementById('next');
+    var Play = document.getElementById('play');
+    var ii = 0; // 默认显示的图片;
+    var timer; // 定时器
+
+    autoPlay();
+
+    // 幻灯片自动播放函数
+    function autoPlay(){
+      timer = setInterval(function() {
+        ii++;
+        if(ii>Imgs.length-1) ii = 0;
+        goTo(ii);
+      }, 1000)
+    }
+
+    // 跳转到指定的图片
+    function goTo(num){
+      for (var i =0; i<Imgs.length;i++) {
+        if(num == i){
+          // 显示当前的图片
+          olObj[num].style.background = 'green';
+          // 改图片标记的样式
+          Imgs[num].style.display = 'block';
+        }else{
+          Imgs[i].style.display = 'none';
+          olObj[i].style.background = '#000';
+        }
+      }
+    }
+
+    // 点击图片标记进入到相应图片
+    for (var i = 0; i < olObj.length; i++) {
+      olObj[i].onclick = function(){
+        // goTo();
+        // 获取 标记里的 index 属性的值
+        // alert(this.getAttribute('index'));
+        goTo(this.getAttribute('index'));
+      }
+
+    }
+
+    // 上一张
+    Prev.onclick = function (){
+      ii -= 1;
+      if(ii<0) ii = Imgs.length-1;
+      goTo(ii);
+    }
+
+    // 下一张
+    Next.onclick = function (){
+      ii += 1;
+      if(ii>Imgs.length-1) ii = 0;
+      goTo(ii);
+    }
+
+    // 鼠标移入幻灯片 停止自动播放功能
+    Play.onmouseover = function (){
+      clearInterval(timer);
+
+    }
+    // 鼠标移出幻灯片 开始自动播放功能
+    Play.onmouseout = function (){
+      autoPlay();
+    }
+
+
+
+
+  </script>
+</body>
+</html>

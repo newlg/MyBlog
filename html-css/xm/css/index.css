@@ -1,0 +1,63 @@
+/*自定义*/
+*,img{margin: 0px;padding: 0;}
+img{max-width:100%;border: 0;vertical-align: middle;}
+.width{max-width: 1226px;margin: 0 auto;}
+ul,li{display: inline-block;list-style: none;}
+a{color: #888;text-decoration: none;}
+a:hover{color: #FF6709;}
+.ml13{margin-left: 13px;}
+.bg-1{background: #fafafa;}
+.fl{float: left;}
+.fr{float: right;}
+.clear{clear: both;}
+/*herder*/
+            /*top-1*/
+.top-1{background: #333;height:40px;}
+.herder a{text-decoration: none;color: #888;}
+.herder li{color: #555;font-size: 12px;margin-left: 3px;line-height: 40px;text-align: center;}
+.herder .gouwuche{width: 100px;height: 40px;}
+.herder a:hover{color: #fff;}
+.herder .gouwuche a:hover{color: #fff;color: #ff6700;}
+.herder .gouwuche:hover{background: #fff;}
+            /*top-2*/
+.top-2{margin-top:20px; }
+.top-2 .left a:nth-child(2){margin-left: 30px;}
+.top-2 .main li{font-size: 16px;margin:10px 8px;}
+.top-2 .main li  a{color: #111;}
+.top-2 .main li  a:hover{color: #ff6700;}
+.top-2 .right{margin-left: 40px;}
+.top-2 .right .sousuo-1{width: 222px;height: 48px;border: 1px solid #ccc;}
+.top-2 .right .sousuo-2{width: 48px;height: 48px;border: 1px solid #ccc;}
+.top-2 .right input{width: 222px;height: 48px;background: #CCE8CF;border:0;}
+.top-2 .right button{width: 48px;height: 48px; background-image: url("../images/xiaotubiao1.jpg");background-position: 615px 339px;border:0;}
+
+/*主体部分1*/
+.body{margin: 20px auto;position: relative;}
+.body .content a{color: #fff;text-decoration: none;line-height: 42px;}
+.body .content .nav ul{margin: 20px 0;}
+.body .content .nav ul li{display:block;width: 180px;padding: 1px 25px;line-height: 40px;}
+.body .content ul li span{float: right;}
+.body .content .nav{background-color:rgba(40,40,40,0.75);width: 230px;position: absolute;top: 0px;}
+.body .content ul li:hover{background:#FF6700;}
+.body .content .bottom{margin: 15px auto;}
+.body .content .bottom .left{width: 234px; }
+.body .content .bottom .left li{width: 77px;height: 84px;background:#5F5750;border-right: 1px dotted #888;border-bottom: 1px dotted #888;text-align: center;line-height: 83px;float:left; }
+.content .bottom .left li a{color: #aaa;font-size: 14px;}
+.content .bottom .left li a:hover{color: #d5d5d5;}
+.body .content .bottom .right div{float: left;margin-left:14px; width: 316px;}
+/*.body .content .bottom .right img{width: 316px;height: 170px;}*/
+/*主体-2*/
+.body .biaoti{height: 70px;line-height: 70px;}
+.body .biaoti p{font-size: 28px;}
+.body .conten .main .right div{float: left;background: #FAFAFA;width: 234px;text-align: center;padding-top:35px; margin-right: 14px;}
+.body .conten .main .right div:nth-child(5){margin: 0;}
+.body .b1{border-top: 1px solid #FFAC13; color: #FFAC13}
+.body .b2{border-top: 1px solid #83C44E;color:#83C44E}
+.body .b3{border-top: 1px solid #2196F3;color:#2196F3}
+.body .b4{border-top: 1px solid #E53935;color:#E53935;;}
+.body .b5{border-top: 1px solid #00C0A5;color:#00C0A5;;}
+/*图片中的字体*/
+.body .ziti a{font-size:14px;color: #111; text-decoration:none;line-height: 24px;}
+.body .ziti p{font-size:12px;color: #aaa; margin:10px 0;}
+.body .ziti span{font-size:14px;color: #FF6709;margin-top: 10px;display: inline-block;}
+.footer{font-family: "楷体"; color:#CACACA;font-size: 22px; text-align:  center;padding: 15px; }

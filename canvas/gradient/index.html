@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{border: 1px solid green; background:#FFF;}	
+		body{background:pink;}
+
+	</style>	
+</head>
+<body>
+	<canvas id="mycanvas" width="900" height="500">
+		你的浏览器不支持 canvas 标签
+	</canvas>	
+	<script>
+		// 获取 canvas 对象
+		var Canvas = document.getElementById('mycanvas');
+		// 获取一个 2d 绘制环境
+		var cxt = Canvas.getContext('2d');
+
+		// Css 3 线性渐变 和 径向渐变
+
+		// (方向，起始颜色，结束颜色。。。)
+
+		// 添加渐变
+		var linear = cxt.createLinearGradient(10,10,600,10);
+
+		// 添加渐变的颜色 和颜色的位置
+		linear.addColorStop(0,'red');
+		linear.addColorStop(0.5,'green');
+		linear.addColorStop(1,'yellow');
+
+		// 使用渐变
+		cxt.fillStyle = linear;
+
+		// 画矩形
+		cxt.fillRect(10,10,600,100);
+
+
+
+	</script>
+</body>
+</html>

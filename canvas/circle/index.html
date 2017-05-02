@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		canvas{border: 1px solid green; background:#FFF;}	
+		body{background:pink;}
+
+	</style>	
+</head>
+<body>
+	<canvas id="mycanvas" width="900" height="500">
+		你的浏览器不支持 canvas 标签
+	</canvas>	
+	<script>
+		// 获取 canvas 对象
+		var Canvas = document.getElementById('mycanvas');
+		// 获取一个 2d 绘制环境
+		var cxt = Canvas.getContext('2d');
+
+		// 绘制一个圆
+		cxt.strokeStyle = 'red';
+
+		// 开始路径
+		cxt.beginPath();
+		//  画一个整圆
+		cxt.arc(300,300,100,0,Math.PI/180*360,true);
+
+
+		// 画一个圆弧
+		// cxt.arc(300,300,100,Math.PI/180*0,Math.PI/180*90,false);
+
+		// 结束路径
+		cxt.stroke();
+	
+		// 设置填充的颜色
+		cxt.fillStyle = 'yellow';
+
+		cxt.fill();
+
+
+	</script>
+</body>
+</html>

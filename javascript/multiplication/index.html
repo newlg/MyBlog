@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="lg">
+<style>
+  table{border-collapse:collapse;}
+  td{border:1px solid blue;width:80px;height:30px;text-align:center;background:yellow;color:red;}
+</style>
+</head>
+<body>
+<script>
+  // for(var x = 1;x < 10;++x){
+  //   for(var y = 1;y <=x;++y){
+  //
+  //     document.write(x+'X'+y+'='+y*x+'&nbsp');
+  //   }
+  //   document.write('<br>');
+  // }
+
+
+  document.write('<table>');
+  for(var x = 1;x < 10;++x){
+    document.write('<tr>');
+    for(var y = 1;y <=x;++y){
+      document.write('<td>');
+
+      document.write(x+'X'+y+'='+y*x+'&nbsp');
+      document.write('</td>');
+    }
+    document.write('</tr>');
+  }
+  document.write('<table>');
+
+
+</script>
+
+</body>
+</html>
