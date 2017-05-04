@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IFE JavaScript Task 05</title>
+  <style>
+    div{
+      background-color: red;
+      color: white;
+      display: inline-block;
+      margin: 5px;
+      width: 20px;
+      vertical-align: bottom;
+    }
+  </style>
+</head>
+<body>
+  <input type="number" id="text1" required="required" />
+  <input type="button" value="左侧入">
+  <input type="button" value="右侧入">
+  <input type="button" value="左侧出">
+  <input type="button" value="右侧出">
+  <input type="button" value="排序"><br />
+
+  <script>
+    var oArray = [10,3,7,12,11,30,12];
+    (function(){
+      for (var i = 0; i < oArray.length; i++) {
+        div = document.createElement('div');
+        div.style.height = oArray[i]+"px";
+        document.body.appendChild(div);   //创建元素并设置高度
+      }
+    })();
+    var text1 =  document.getElementById('text1');
+    var oBtns = document.getElementsByTagName('input');
+    var oDivs = document.getElementsByTagName('div');
+    oBtns[1].onclick = function(){   //左边入
+      if (oDivs.length>60) {
+        alert('元素已经超过60个');
+        return false;
+      }
+      if (text1.value>=10 && text1.value<=100) {
+        oArray.unshift(text1.value);
+        div = document.createElement('div');
+        div.style.height = text1.value + 'px';
+        document.body.insertBefore(div,oDivs[0]);
+      }else {
+        alert('请输入10-100数字');
+      }
+    }
+    oBtns[2].onclick = function(){   //右边入
+      if (oDivs.length>60) {
+        alert("元素个数超过60个");
+        return false;
+
+      }
+      if (text1.value >=10 && text1.value <= 100) {
+        oArray.push(text1.value);
+        div =  document.createElement('div');
+        div.style.height = text1.value + 'px';
+        document.body.appendChild(div);
+      }else {
+        alert('请输入10-100数字');
+      }
+    }
+
+    oBtns[3].onclick =  function(){   //左边出
+      var num1 =  oArray.shift();
+      oDivs[0].outerHTML=  '';
+      alert(num1);
+    }
+    oBtns[4].onclick =  function(){ //右边出
+      var num2 = oArray.pop();
+      oDivs[oDivs.length-1].outerHTML = '';
+      alert(num2);
+    }
+    oBtns[5].onclick = function(){
+      var i = 0,j = 0;
+      function comparison(){
+        for (var n = 0; n < oDivs.length; n++) {  //元素恢复红色
+          oDivs[n].style.backgroundColor = 'red';
+        }
+        if (j == oArray.length) {
+          i++;
+          j = i;
+        }
+        if(i == oArray.length){
+        clearInterval(compare);
+        return false;
+      }
+      oDivs[i].style.backgroundColor = 'green';
+      oDivs[j].style.backgroundColor = 'green';  //正在比较的元素设为绿色
+        if (oArray[i] > oArray[j]) {
+          var m = oArray[j];
+          oArray[j] = oArray[i];
+          oArray[i] = m;
+          oDivs[i].style.height = oArray[i] + 'px';
+          oDivs[j].style.height = oArray[j] + 'px';
+        }
+
+        j++;
+
+      }
+      var compare = setInterval(comparison,1000);
+    }
+
+    </script>
+</body>
+</html>
