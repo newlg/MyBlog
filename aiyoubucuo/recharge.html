@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="天天三公"/>
+    <meta name="description" content="我的记录" />
+    <link rel="stylesheet" rev="stylesheet" href="style/reset_base_m.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="style/recharge.css" type="text/css" media="all" />
+
+
+    </head>
+    <body>
+
+      <main class="papers">
+        <div class="container w990 ma ">
+            <h1>我的记录</h1>
+            <h2>剩余平台币: <span class="cf">1000</span></h2>
+            <h2>查询日期: <input  class="input_data_begin cf"onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"> &nbsp;&nbsp;至&nbsp;&nbsp;<input class="input_data_end cf"onclick="laydate({istime: true, format: 'YYYY-MM-DD'})"></h2>
+            <!-- <form class="f17" action="" method="">
+              <p class="pd1833"for="">平台登录密码：<input type="password" name="" value=""></p>
+              <p class="pd1833"for="">身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证：<input id="IDCard" type="text" name="" value=""><span id="IDCardInfo"class="ml100 c1"></span></p>
+              <p class="pd1833"for="">确&nbsp;认&nbsp;身&nbsp;份证：<input id="CIDCard" type="" name="" value=""><span id="CIDCardInfo" class="ml100 c1"></span></p>
+              <p class="pd1833"for="">真&nbsp;&nbsp;实&nbsp;&nbsp;姓&nbsp;&nbsp;名：<input type="password" name="" value="">  <a class="ml136"href="#">下一步</a></p>
+
+            </form> -->
+            <div class="refer">
+              <a class="ml136"href="#">立即查询</a>
+            </div>
+
+            <h3 class="pd3070 f24">指定日期内无交易明细，查询其他日期</h3>
+            <table class="contain_info pd3070">
+              <tr class="tc f24 cf" >
+                <td>充值金额</td>
+                <td>充值时间</td>
+                <td>充值游戏</td>
+
+              </tr>
+              <tr>
+                <td>1000元</td>
+                <td>2017-04-17</td>
+                <td>天天三公</td>
+              </tr>
+              <tr>
+                <td>1000元</td>
+                <td>2017-04-17</td>
+                <td>天天三公</td>
+              </tr>
+              <tr>
+                <td>1000元</td>
+                <td>2017-04-17</td>
+                <td>天天三公</td>
+              </tr>
+              <tr>
+                <td>1000元</td>
+                <td>2017-04-17</td>
+                <td>天天三公</td>
+              </tr>
+            </table>
+
+        </div>
+
+      </main>
+        <script src="script/jquery.js"></script>
+        <script src="script/index.js"></script>
+        <script src="lib/laydate/laydate.js"></script>
+        <script>
+  laydate({
+    elem: '#d',
+    event: 'click',
+    istoday: false,
+    festival: true,
+    choose: function(dates){ //选择好日期的回调
+      alert('哥们你选择好了'+dates);
+        }
+  })
+
+   laydate.skin('molv');  //加载皮肤，参数lib为皮肤名
+
+</script>
+    </body>
+
+
+</html>

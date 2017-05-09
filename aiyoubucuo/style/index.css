@@ -1,0 +1,43 @@
+/*公共样式*/
+input:focus{ outline: -webkit-focus-ring-color auto 0px;} /*处理chrome输入框获取焦点有边框*/
+.w1180{width:1180px;}
+.w990{width: 990px;}
+.ml0{margin-left: 0px;}
+.ml97{margin-left: 97px;}
+
+header{
+  width: 100%;
+  height: 130px;
+}
+.headerBg{
+  background: url('../images/header.png') no-repeat center center;
+  /*background-size: contain;*/
+}
+.logo{
+  display: block;
+  height: 100%;
+  line-height: 85px;
+
+}
+
+.nav{
+ list-style: none;
+ float: right;
+ margin: 15px 0;
+ padding: 10px 0;
+}
+ ul.nav li{
+ position: relative;
+ display: inline-block;
+ padding: 0 7px;
+}
+ ul.nav li a{
+ display: block;
+ height: 35px;
+ line-height: 35px;
+ padding: 0 10px;
+ text-align: center;
+ font-size: 30px;
+ color: #fff;
+ text-decoration: none;
+}

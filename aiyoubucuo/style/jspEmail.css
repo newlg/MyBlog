@@ -1,0 +1,178 @@
+/*公共样式*/
+input:focus{ outline: -webkit-focus-ring-color auto 0px;} /*处理chrome输入框获取焦点有边框*/
+.w1180{width:1180px;}
+.w990{width: 990px;}
+.ml0{margin-left: 0px;}
+.ml97{margin-left: 97px;}
+
+
+.pa1030{
+  padding: 10px 30px;
+}
+.pd1833{
+    padding: 18px 33px;
+}
+
+.c1{
+  color:#FD8310;
+}
+.c2{
+  color: #E9DDE9;
+}
+.cg{
+  color: green;
+}
+.cr{
+  color: #ce1f1f;
+}
+.ml136{margin-left: 136px;}
+.ml185{margin-left: 185px;}
+.ml100{
+  margin-left: 100px;
+}
+.f15{font-size: 15px;}
+.f17{font-size:17px;}
+.f24{font-size: 24px}
+body {font-family: "Microsoft YaHei", "微软雅黑";}
+.papers{
+  width: 100%;
+  background: #7665CD;
+}
+.bg{
+    background: #7665CD;
+}
+
+.pd3070{
+  padding: 10px 70px;
+}
+/*内容*/
+h1{
+
+  padding: 10px 30px;
+  font-size: 24px;
+  color: #fff;
+  border-bottom: 2px dashed #eee;
+}
+h2{
+  color: #E9DEE9;
+  font-size: 15px;
+  padding: 18px 33px;
+  border-bottom: 2px dashed #eee;
+}
+.container p{
+  color: #E9DEE9;
+}
+
+form{
+  font-size: 20px;
+  color: #E2E0ED;
+  padding:30px 30px;
+  border-bottom: 2px dashed #eee;
+}
+
+form .inptEmail{
+  width: 300px;
+  height: 40px;
+  background: #6246BF;
+  border: 1px solid #6246BF;
+}
+.Btn{
+padding: 0;
+border: 1px solid #9185EE;
+outline: 0;
+color: #EFEDFF;
+background-color: #9185EE;
+text-decoration: none;
+text-align: center;
+display: inline-block;
+line-height: 40px;
+width: 120px;
+height: 40px;
+font-size: 20px;
+}
+
+h3{
+  color: #FDE2B1;
+  font-size: 18px;
+
+
+}
+
+h4{
+    border-bottom: 2px dashed #eee;
+    padding: 10px 0;
+}
+div.step_context{height:37px; margin:15px; }
+
+.step_context ul{  height:37px; width:auto; list-style:none; margin:0px; padding:0px; float:left; }
+.step_context li{
+background-image:  url("../images/step1.png");
+ background-repeat:no-repeat;
+border:none;
+height:37px;width:165px;
+float:left;
+list-style:none;
+/*background: #FDCB5F;*/
+
+line-height:37px;position:relative;  }
+.step_context li  span{
+background-color:#268226;width:35px; height:26px; display:block; position:absolute; top:5px; left:4px; line-height:25px; color:#FFFFFF; font-weight:bold; font-size:17px; text-align:center;}
+.step_context li a{
+background-image:  url("../images/step1.png"); background-repeat:repeat-x;border:none;height:37px;width:153px; float:left;color:#003300; text-decoration:none; font-size:12px;list-style:none; text-align:center;  }
+/*�Ѿ����ɵĲ�������ʽ*/
+li.finshStep{
+ background-position: 153px 0px;
+}
+li.finshStep a{
+ background-position: 153px -237px;
+}
+/*��һ�����ɵĲ�������ʽ*/
+li.firstFinshStep{
+ background-position: 153px 0px;
+}
+li.firstFinshStep a{
+ background-position: 153px -237px;
+}
+/*ֻ���е���һ��*/
+li.firstFinshStep_curr1{
+ background-position: 153px 0px;
+}
+li.firstFinshStep_curr1 a{
+ background-position: 153px -237px;
+}
+
+/*��һ��δ���ɵĲ�����ʽ*/
+li.coressStep{
+ background-position: 153px -79px;
+  background-color:#77BB77;
+}
+li.coressStep a{
+ background-position: 153px -237px;
+}
+/*�ȴ����ɵĲ�����ʽ*/
+li.loadStep{
+ background-position: 153px -118px;
+
+}
+li.loadStep a{
+ background-position: 153px -198px;
+}
+li.loadStep  span{
+background:#515751;}
+/*����һ���������ɺ�����ʽ*/
+li.finshlast{
+ background-position: 153px -39px;
+
+}
+li.finshlast a{
+ background-position: 153px -237px;
+}
+/*����һ����������ʽ*/
+li.last{
+ background-position: 153px -158px;
+ }
+ li.last a{
+ background-position: 153px -198px;
+}
+li.last  span{
+background:#515751;}

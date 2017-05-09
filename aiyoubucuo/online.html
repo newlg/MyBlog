@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="天天三公"/>
+    <meta name="description" content="我的记录" />
+    <link rel="stylesheet" rev="stylesheet" href="style/reset_base_m.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="style/online.css" type="text/css" media="all" />
+
+
+    </head>
+    <body>
+
+      <main class="papers">
+        <div class="container w990 ma ">
+            <h1>在线客服</h1>
+            <div class="online">
+              <a href="#"><img src="./images/icon_online.png" alt=""></a>
+            </div>
+
+            <h3 class="pd3070 f24"><span class="userName">客服001</span>,你好！您可以通过企业QQ或者平台在线客服与我们取得联系。</h3>
+
+            <div class="inlines">
+                <a  class=""href="#"><img src="./images/icon_inline.png" alt=""></a>
+            </div>
+            <p class="pd1030 cf f17"><span class="ctis">小提示：</span>选择客服QQ方式时，需要在线登录您的QQ，客服QQ的交谈和正式的QQ聊天相同。</p>
+
+        </div>
+
+      </main>
+        <script src="script/jquery.js"></script>
+        <script src="script/index.js"></script>
+        <script src="lib/laydate/laydate.js"></script>
+        <script>
+  laydate({
+    elem: '#d',
+    event: 'click',
+    istoday: false,
+    festival: true,
+    choose: function(dates){ //选择好日期的回调
+      alert('哥们你选择好了'+dates);
+        }
+  })
+
+   laydate.skin('molv');  //加载皮肤，参数lib为皮肤名
+
+</script>
+    </body>
+
+
+</html>
