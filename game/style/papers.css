@@ -1,0 +1,93 @@
+/*公共样式*/
+input:focus{ outline: -webkit-focus-ring-color auto 0px;} /*处理chrome输入框获取焦点有边框*/
+.w1180{width:1180px;}
+.w990{width: 990px;}
+.ml0{margin-left: 0px;}
+.ml97{margin-left: 97px;}
+
+
+.pa10_30{
+  padding: 10px 30px;
+}
+.pd1833{
+    padding: 18px 33px;
+}
+
+.c1{
+  color:#FD8310;
+}
+.cg{
+  color: green;
+}
+.ml136{margin-left: 136px;}
+.ml100{
+  margin-left: 100px;
+}
+.f17{font-size:17px;}
+.f24{font-size: 24px}
+body {font-family: "Microsoft YaHei", "微软雅黑";}
+.papers{
+  width: 100%;
+  background: #7665CD;
+}
+.bg{
+    background: #7665CD;
+}
+
+.pd3070{
+  padding: 10px 70px;
+}
+/*内容*/
+h1{
+
+  padding: 10px 30px;
+  font-size: 24px;
+  color: #fff;
+  border-bottom: 2px dashed #eee;
+}
+h2{
+  color: #E9DEE9;
+  font-size: 15px;
+  padding: 18px 33px;
+  border-bottom: 2px dashed #eee;
+}
+.container p{
+  color: #E9DEE9;
+}
+
+form{
+  font-size: 17px;
+  color: #E2E0ED;
+  padding:30px 30px;
+  border-bottom: 2px dashed #eee;
+}
+
+input{
+
+
+  width: 450px;
+  height: 30px;
+  background: #6246BF;
+  border: 1px solid #6246BF;
+}
+form a{
+padding: 0;
+border: 0;
+outline: 0;
+color: #EFEDFF;
+background-color: #9185EE;
+text-decoration: none;
+text-align: center;
+display: inline-block;
+line-height: 50px;
+width: 129px;
+height: 45px;
+font-size: 20px;
+}
+
+h3{
+  color: #FDE2B1;
+  font-size: 18px;
+
+
+}

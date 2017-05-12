@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="天天三公"/>
+    <meta name="description" content="邮箱绑定" />
+    <link rel="stylesheet" rev="stylesheet" href="style/reset_base_m.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="style/jspEmail.css" type="text/css" media="all" />
+    <link rel="stylesheet" rev="stylesheet" href="style/max-990px.css" type="text/css" media="all" />
+
+    </head>
+    <body>
+      <main class="papers">
+        <div class="container w990 ma ">
+            <h1>个人资料-邮箱绑定</h1>
+            <div class="step_context test pa1030"></div>
+            <h4 class="f15 tc c2">为保证账号安全，请填写您常用的安全邮箱地址</h4>
+            <form class="" action="" method="">
+              <p class="pd1833"for="">请输入新邮箱：<input id="inptEmail" class="inptEmail"type="text" name="" value=""><span id="inptEmailInfo"></span></p>
+              <p class="ml185">
+                <input type="submit" class="Btn" value="确认修改"></input>
+                <input type="reset" class="Btn" value="取消修改"></input>
+              </p>
+
+
+            </form>
+            <!-- <h2>身份证作为通行证归属感和防沉迷系统的凭证，请真实填写，一旦设置不可随意修改</h2>
+            <form class="f17" action="" method="">
+              <p class="pd1833"for="">平台登录密码：<input type="password" name="" value=""></p>
+              <p class="pd1833"for="">身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证：<input id="IDCard" type="text" name="" value=""><span id="IDCardInfo"class="ml100 c1"></span></p>
+              <p class="pd1833"for="">确&nbsp;认&nbsp;身&nbsp;份证：<input id="CIDCard" type="" name="" value=""><span id="CIDCardInfo" class="ml100 c1"></span></p>
+              <p class="pd1833"for="">真&nbsp;&nbsp;实&nbsp;&nbsp;姓&nbsp;&nbsp;名：<input type="password" name="" value="">  <a class="ml136"href="#">下一步</a></p>
+
+            </form> -->
+            <h3 class="pd3070 f24">养成良好的安全习惯，才能尽可能的保护账号安全</h3>
+            <p class="pd3070 f17">如何养成良好的安全习惯</p>
+            <p class="pd3070 f17">1.安装知名杀毒软件，并保持及时更新</p>
+            <p class="pd3070 f17">2.不安装来历不明的软件和控件</p>
+            <p class="pd3070 f17">3.经常更换密码，且保持密码的安全强度</p>
+            <p class="pd3070 f17">4.账号只可自己使用，不给予他人使用，不告诉他人密码</p>
+            <p class="pd3070 f17">5.密保资料妥善保管，不泄露给他人</p>
+
+        </div>
+
+      </main>
+        <script src="script/jquery.js"></script>
+        <script src="script/jspEmail.js"></script>
+
+
+        <script type="text/javascript">
+	//所有步骤的数据
+	var stepListJson=[{StepNum:1,StepText:"绑定新邮箱"},
+    {StepNum:2,StepText:"验证邮箱"},
+    {StepNum:3,StepText:"邮箱绑定成功"}];
+
+	//当前进行到第几步
+	var currentStep=0;
+//new一个工具类
+var StepTool = new Step_Tool_dc("test","mycall");
+//使用工具对页面绘制相关流程步骤图形显示
+StepTool.drawStep(currentStep,stepListJson);
+//回调函数
+function mycall(restult){
+//	alert("mycall"+result.value+":"+result.text);
+	StepTool.drawStep(result.value,stepListJson);
+	//TODO...这里可以填充点击步骤的后加载相对应数据的代码
+}
+</script>
+    </body>
+
+
+</html>

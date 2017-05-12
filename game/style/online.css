@@ -1,0 +1,144 @@
+/*公共样式*/
+input:focus{ outline: -webkit-focus-ring-color auto 0px;} /*处理chrome输入框获取焦点有边框*/
+.w1180{width:1180px;}
+.w990{width: 990px;}
+.ml0{margin-left: 0px;}
+.ml97{margin-left: 97px;}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.pa10_30{
+  padding: 10px 30px;
+}
+.pd1833{
+    padding: 18px 33px;
+}
+
+.c1{
+  color:#FD8310;
+}
+.cg{
+  color: green;
+}
+.cf{
+  color: #fff;
+}
+
+.ctis{
+  color: #E9A633;
+}
+
+.ml136{margin-left: 136px;}
+.ml100{
+  margin-left: 100px;
+}
+.f17{font-size:17px;}
+.f24{font-size: 24px}
+body {font-family: "Microsoft YaHei", "微软雅黑";}
+.papers{
+  width: 100%;
+  background: #7665CD;
+}
+.bg{
+    background: #7665CD;
+}
+
+.pd3070{
+  padding: 10px 70px;
+}
+.pd1030{
+    padding: 10px 30px;
+}
+/*内容*/
+h1{
+
+  padding: 10px 30px;
+  font-size: 24px;
+  color: #fff;
+  border-bottom: 2px dashed #eee;
+}
+h2{
+  color: #342A91;
+  font-size: 24px;
+  padding: 18px 33px 0px;
+
+
+}
+.input_data_begin{
+  width: 280px;
+
+  background: #393452;
+  background: url('../images/clock.png') no-repeat 240px center;
+  background-size: contain;
+}
+.input_data_end{
+  width: 280px;
+  background: #393452;
+  background: url('../images/clock.png') no-repeat 240px center;
+  background-size: contain;
+}
+.online{
+  padding: 15px 15px;
+  border-bottom: 2px dashed #eee;
+
+}
+.inlines{
+    padding: 45px 15px;
+text-align: center;
+}
+.online_btn{
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #EFEDFF;
+  background-color: #9185EE;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  line-height: 50px;
+  width: 300px;
+  height: 100px;
+  font-size: 20px;
+margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+.container p{
+  color: #E9DEE9;
+}
+
+
+h3{
+  color: #fff;
+  font-size: 18px;
+  background: url('../images/online_war.png') no-repeat 20px center;
+  background-size: contain;
+  text-indent: 10px;
+  margin-top: 10px;
+}
+
+.contain_info{
+     margin-top: 30px;
+}
+.contain_info tr{
+  float: left;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  border-bottom: 1px solid #A2A2A2;
+
+}
+.contain_info tr td{
+  font-size: 18px;
+  border-top: 0;
+  border-left: 0;
+  width: 330px;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+
+}
