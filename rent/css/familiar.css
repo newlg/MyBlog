@@ -1,0 +1,154 @@
+*{margin: 0;padding: 0}
+
+body{
+  background: #eeeeec;
+}
+
+.header{
+  height: 72px;
+  line-height: 72px;
+  background: #52a8f9;
+  color: #fff;
+}
+.header .center{
+  position: relative;
+}
+.center{
+  width: 90%;
+  margin: 0 auto;
+}
+.header .header_l{
+  top: 0;
+  left: 0;
+}
+.header .center .header_l{
+  height:72px;
+  font-size: 12px;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.header #history{
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  background: url('../images/left.png')no-repeat center center;
+  line-height: 30px;
+}
+
+.header .header_title{
+  font-size: 19px;
+  text-align: center;
+  line-height: 72px;
+}
+
+.content {
+  background: #eeeeec;
+  font-size: 16px;
+}
+.content .box1{
+  background: #fff;
+  display: block;
+  padding: 15px 0 0 0;
+}
+.content .box1 ul{
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+.content .box1 ul li{
+  background-image: url('../images/icon-cjwt.png');
+  background-repeat: no-repeat;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  background-position:left 45%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #eaeaea;
+}
+.content .box1 ul a.notice-title{
+  text-indent: 30px;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  color: #333;
+  text-decoration: none;
+}
+.content .box1 ul li .notice-r{
+  float: right;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: url('../images/right.png');
+  background-repeat: no-repeat;
+  background-position: inherit;
+
+
+}
+
+.box2 {
+  margin-top: 10px;
+  background: #fff;
+  height: 213px;
+}
+.box2 li{
+  float: left;
+  width: 50%;
+  text-align: center;
+  list-style: none;
+  padding: 20px 0;
+}
+.box2  li a{
+  display: block;
+  text-decoration: none;
+  color: #686868;
+
+
+}
+.box2  li span.icon-img{
+  width: 86px;
+  height: 86px;
+}
+
+.box2  li span.img-kefu{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/kefu.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box2  li span.img-ph-num{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/ph-num.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+@media only screen and (min-width: 310px) and (max-width: 360px) {
+.content .box1 ul a.notice-title{
+   height: 40px;
+   line-height: 40px;
+}
+.content .box1 ul li .notice-r{
+  height: 40px;
+  line-height: 40px;
+}
+  .box2{
+    height: 184px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+  .content .box1 ul a.notice-title{
+    height: 54px;
+    line-height: 54px;
+  }
+  .box2{
+    height: 254px;
+  }
+}

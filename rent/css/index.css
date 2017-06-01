@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #EEEEEE;
+}
+
+.content{
+  padding-bottom: 10px;
+  background: #fff;
+}
+
+.s_banner{
+  position: relative;
+  max-height: 228px;
+  height: 35.625vw;
+  overflow: hidden;
+}
+
+.s_banner a{
+  position: relative;
+  display: block;
+  z-index: 1;
+
+}
+.s_banner a img{
+  width: 100%;
+  height: 100%;
+  max-height: 228px;
+}
+.container{
+  /*width: 90%;*/
+  padding: 5px 0 40px;
+  margin: 0 auto;
+
+
+}
+.container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+.container  li{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.container  li a{
+  display: block;
+  text-decoration: none;
+
+}
+.container  li span.icon-img{
+  width: 48px;
+  height: 48px;
+}
+.container  li span.img-yzdg{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/yzdg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container  li span.img-rmtj{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/rmtj.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container  li span.img-fwbz{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/fwbz.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container  li span.img-cjwt{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/cjwt.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container  li span.title{
+  display: block;
+  margin: 6px 0 2px;
+  font-size: 16px;
+  color: #454545;
+  text-align: center;
+}
+/*主打车*/
+
+.box-list{
+  padding-bottom: 10px;
+  background: #fff;
+}
+.cont-box{
+  width: 100%;
+  margin: 10px auto 0;
+  padding-bottom: 10px;
+  background: #fff;
+  height: 220px;
+}
+.cont-box .title{
+  width: 90%;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px auto;
+  border-bottom: 2px solid #F9F9F9;
+
+}
+.cont-box .title h3{
+  float: left;
+  color: #29B0F4;
+}
+.cont-box .title a{
+  float: right;
+  text-decoration: none;
+  color: #333;
+}
+.cont-box .car-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*padding: 5px 0 56px;*/
+}
+.cont-box .car-list  li{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.cont-box .car-list li a{
+  display: block;
+  text-decoration: none;
+
+}
+.cont-box .car-list  li span.icon-img{
+  width: 90px;
+  height: 60px;
+  display: block;
+  margin: 10px auto 5px;
+  background: url('../images/zhudache.png') no-repeat center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.cont-box .car-list li span.des{
+  display: block;
+  margin: 6px 0 2px;
+  font-size: 11px;
+  color: #454545;
+  text-align: center;
+}
+.box-list .news-list{
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+  /*padding: 0 0 0 20px;*/
+  font-size: 14px;
+}
+.box-list .news-list li{
+  border-bottom: 1px dashed #ecebeb;
+
+}
+.box-list .news-list li a{
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  text-decoration: none;
+}
+.box-list .news-list li .news-data{
+  float: right;
+  line-height: 40px;
+  color: #999;
+}

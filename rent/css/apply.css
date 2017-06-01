@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #EEEEEE;
+}
+
+.content{
+  padding-bottom: 10px;
+  background: #fff;
+}
+
+.s_banner{
+  position: relative;
+  max-height: 228px;
+  height: 35.625vw;
+  overflow: hidden;
+}
+
+.s_banner a{
+  position: relative;
+  display: block;
+  z-index: 1;
+
+}
+.s_banner a img{
+  width: 100%;
+  height: 100%;
+  max-height: 228px;
+}
+.container{
+  /*width: 90%;*/
+  padding: 5px 0 40px;
+  margin: 0 auto;
+
+
+}
+.container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+.container  li{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.container  li a{
+  display: block;
+  text-decoration: none;
+
+}
+.container  li span.icon-img{
+  width: 48px;
+  height: 48px;
+}
+.container  li span.img-lsf{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/lsf.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container  li span.img-dyg{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/dyg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container  li span.img-aqrz{
+  display: block;
+
+  margin: 15px auto 10px;
+  background-image: url('../images/aqrz.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container  li span.title{
+  display: block;
+  margin: 6px 0 2px;
+  font-size: 16px;
+  color: #454545;
+  text-align: center;
+}
+.container  li span.sub-des{
+  display: block;
+  margin: 6px 0 2px;
+  font-size: 16px;
+  color: #9D9D9D;
+  text-align: center;
+}
+/*以租代购流程*/
+
+.box-list{
+  padding-bottom: 10px;
+  background: #fff;
+}
+.cont-box{
+  width: 100%;
+  margin: 10px auto 0;
+  padding-bottom: 10px;
+  background: #fff;
+  height: 350px;
+}
+.cont-box .title{
+  width: 90%;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px auto;
+  border-bottom: 2px solid #F9F9F9;
+
+}
+.cont-box .title h3{
+  float: left;
+  color: #29B0F4;
+  font-size: 16px;
+}
+.box-list .liucheng{
+
+  width: 100%;
+  height: 300px;
+  background-image: url('../images/liucheng.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*margin: 10px 0;
+  padding: 277px 0 0 0px;*/
+}
+.apply{
+  display: block;
+  padding: 15px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: #18AAF3;
+  padding: 5px auto 5px;
+  text-decoration: none;
+  color: 16px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 360px) {
+  .cont-box{
+    height: 240px;
+  }
+.box-list .liucheng{
+  height: 200px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  .cont-box{
+    height: 384px;
+  }
+.box-list .liucheng{
+  height: 343px;
+  }
+}

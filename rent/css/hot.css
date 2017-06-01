@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0}
+
+body{
+  background: #fff;
+}
+
+.header{
+  height: 72px;
+  line-height: 72px;
+  background: #52a8f9;
+  color: #fff;
+}
+.header .center{
+  position: relative;
+}
+.center{
+  width: 90%;
+  margin: 0 auto;
+}
+.header .header_l{
+  top: 0;
+  left: 0;
+}
+.header .center .header_l{
+  height:72px;
+  font-size: 12px;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.header #history{
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  background: url('../images/left.png')no-repeat center center;
+  line-height: 30px;
+}
+
+.header .header_title{
+  font-size: 19px;
+  text-align: center;
+  line-height: 72px;
+}
+
+.content {
+  background: #fff;
+  font-size: 16px;
+}
+.content .box1{
+  background: #fff;
+  display: block;
+
+}
+.content .box1 ul{
+  list-style: none;
+  margin: 0;
+  font-size: 14px;
+  position: relative;
+}
+.content .box1 ul li{
+ position: relative;
+ /*width: 90%;*/
+ height: 137px;
+ margin: 0 auto;
+ padding: 10px 10px 0 10px;
+ border-bottom: 1px solid #EEEEEE;
+}
+.content .box1 ul a.car_list{
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 0 10px 0;
+}
+.content .box1 ul a.car_list img{
+  width: 150px;
+  height: 100px;
+}
+.content .box1 ul .car_list .car_title{
+   position: relative;
+    top: -69px;
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 18px;
+    color: #333;
+}
+.content .box1 ul .car_list .car_money{
+  position: relative;
+   top: -78px;
+   display: inline-block;
+   margin-left: 50%;
+   font-size: 18px;
+   color: #333;
+  color: #18AAF3;
+}
+.content .box1 ul li .ranking{
+  display: block;
+  position: absolute;
+  top: 0 ;
+  right: 13px;
+  width: 30px;
+  height: 30px;
+  /*background: red;*/
+}
+.content .box1 ul li i{
+  color: #fff;
+  text-align: center;
+}
+
+.top1{
+  background: url('../images/top1.png') no-repeat center center;
+  background-size: cover;
+}
+.top2{
+  background: url('../images/top2.png') no-repeat center center;
+  background-size: cover;
+}
+.top3{
+  background: url('../images/top3.png') no-repeat center center;
+  background-size: cover;
+}
+.tops{
+  background: url('../images/tops.png') no-repeat center center;
+  background-size: cover;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 310px) and (max-width: 360px) {
+
+
+
+}
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+
+}
