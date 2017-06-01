@@ -1,0 +1,144 @@
+*{margin: 0;padding: 0}
+
+body{
+  background: #fff;
+}
+
+.header{
+  height: 52px;
+  line-height: 52px;
+  background: #664FCA;
+  color: #fff;
+}
+.header .center{
+  position: relative;
+}
+.center{
+  width: 90%;
+  margin: 0 auto;
+}
+.header .header_l{
+  top: 0;
+  left: 0;
+}
+.header .center .header_l{
+  height:52px;
+  font-size: 12px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.header #history{
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  background: url('../images/left.png')no-repeat center center;
+  line-height: 30px;
+}
+
+.header .header_title{
+  font-size: 19px;
+  text-align: center;
+  line-height: 52px;
+}
+
+.content {
+  background: #fff;
+  font-size: 16px;
+
+
+}
+.content .change_acount{
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+
+}
+.content .change_des{
+  margin-top: 10px;
+  border: 1px solid #E6E6FF;
+  padding: 10px 20px;
+}
+.content .change_des p{
+  margin-top: 5px;
+  border-bottom: 1px solid #F7F7F7;
+  padding: 2px 0 5px;
+}
+.content .change_des p input{
+  background: none;
+  border: 0;
+  outline: none;
+
+}
+.content .change_pay{
+  margin-top: 10px;
+  border: 1px solid #E6E6FF;
+  padding: 10px 10px;
+  display: flex;
+}
+.content .change_pay div{
+
+ width: 90%;
+ height: 50px;
+ line-height: 50px;
+background: url('../images/pay.png') no-repeat 10px 0px;
+text-indent: 30px;
+background-size: contain;
+}
+.content .change_pay .select_pay{
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+
+}
+.content .change_pay div a{
+margin-left: 50px;
+}
+.content .kefu{
+
+text-align: center;
+}
+.content .pay_now{
+  text-align: center;
+}
+.content .pay_now_btn{
+      margin: 15px auto;
+      display: inline-block;
+      padding: 7px 0;
+      border: 0;
+      outline: 0;
+      color: #ffffff;
+      background-color: #664FCA;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      min-width: 125px;
+      border-radius: 5px;
+      font-size: 18px;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 360px) {
+.content .box1 ul a.notice-title{
+   height: 40px;
+   line-height: 40px;
+}
+.content .box1 ul li .notice-r{
+  height: 40px;
+  line-height: 40px;
+}
+  .box2{
+    height: 184px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+  .content .box1 ul a.notice-title{
+    height: 54px;
+    line-height: 54px;
+  }
+  .box2{
+    height: 254px;
+  }
+}

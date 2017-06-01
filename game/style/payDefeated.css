@@ -1,0 +1,93 @@
+*{margin: 0;padding: 0}
+
+body{
+  background: #fff;
+}
+
+.header{
+  height: 52px;
+  line-height: 52px;
+  background: #664FCA;
+  color: #fff;
+}
+.header .center{
+  position: relative;
+}
+.center{
+  width: 90%;
+  margin: 0 auto;
+}
+.header .header_l{
+  top: 0;
+  left: 0;
+}
+.header .center .header_l{
+  height:52px;
+  font-size: 12px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.header #history{
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  background: url('../images/left.png')no-repeat center center;
+  line-height: 30px;
+}
+
+.header .header_title{
+  font-size: 19px;
+  text-align: center;
+  line-height: 52px;
+}
+
+.content {
+  background: #fff;
+  font-size: 16px;
+
+
+}
+.content .change_acount{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.content .change_acount .change_acount_bt{
+  display: block;
+  width: 100%;
+  height: 353px;
+  background: url('../images/defeated.png')no-repeat center center;
+  background-size: cover;
+}
+
+.content .pay_defeated{
+  text-align: center;
+}
+.content .pay_defeated_btn{
+      margin: 15px auto;
+      display: inline-block;
+      padding: 7px 0;
+      border: 0;
+      outline: 0;
+      color: #ffffff;
+      background-color: #06BBC6;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      min-width: 125px;
+      border-radius: 5px;
+      font-size: 18px;
+}
+
+@media only screen and (min-width: 310px) and (max-width: 360px) {
+
+}
+
+
+
+}
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+
+}
