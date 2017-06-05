@@ -74,6 +74,9 @@ body{
   padding: 10px 10px 10px 0;
   overflow: hidden;
 }
+.content .box1 ul a:active{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .content .box1 ul a.car_list img{
   height: 100%
 }
