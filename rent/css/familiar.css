@@ -55,7 +55,6 @@ body{
 .content .box1 ul{
   list-style: none;
   margin: 0;
-  padding: 0 0 0 20px;
   font-size: 14px;
 }
 .content .box1 ul li{
@@ -63,9 +62,11 @@ body{
   background-repeat: no-repeat;
   display: list-item;
   text-align: -webkit-match-parent;
-  background-position:left 45%;
+  background-position:11% 45%;
   background-repeat: no-repeat;
   border-bottom: 1px solid #eaeaea;
+  text-indent: 11%;
+
 }
 .content .box1 ul a.notice-title{
   text-indent: 30px;
