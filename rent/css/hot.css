@@ -61,19 +61,18 @@ body{
 .content .box1 ul li{
  display: flex;
  position: relative;
- /*width: 90%;*/
  height: 137px;
  margin: 0 auto;
- padding: 10px 10px 0 10px;
+ padding: 10px 10px 10px 10px;
  border-bottom: 1px solid #EEEEEE;
 }
 .content .box1 ul a.car_list{
-  display: inline-block;
 
   color: #333;
+  height: 120px;
   text-decoration: none;
-  position: relative;
-  padding: 10px 0 10px 0;
+  padding: 10px 10px 10px 0;
+  overflow: hidden;
 }
 .content .box1 ul a.car_list img{
   height: 100%
