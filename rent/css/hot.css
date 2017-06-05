@@ -59,6 +59,7 @@ body{
   position: relative;
 }
 .content .box1 ul li{
+ display: flex;
  position: relative;
  /*width: 90%;*/
  height: 137px;
@@ -68,30 +69,30 @@ body{
 }
 .content .box1 ul a.car_list{
   display: inline-block;
-  height: 50px;
-  line-height: 50px;
+
   color: #333;
   text-decoration: none;
   position: relative;
   padding: 10px 0 10px 0;
 }
 .content .box1 ul a.car_list img{
-  width: 150px;
-  height: 100px;
+  height: 100%
 }
-.content .box1 ul .car_list .car_title{
-   position: relative;
-    top: -69px;
-    display: inline-block;
-    margin-left: 25px;
+.content .box1 ul li .list{
+  text-align: center;
+  margin-top: 8%;
+  overflow: hidden;
+}
+
+.content .box1 ul .list .car_title{
+    display: block;
+    height: 30%;
     font-size: 18px;
     color: #333;
 }
-.content .box1 ul .car_list .car_money{
-  position: relative;
-   top: -78px;
-   display: inline-block;
-   margin-left: 50%;
+.content .box1 ul  .list .car_money{
+   display: block;
+    height: 30%;
    font-size: 18px;
    color: #333;
   color: #18AAF3;
