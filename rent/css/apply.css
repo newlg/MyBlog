@@ -142,10 +142,10 @@ body{
 .apply{
   display: block;
   padding: 15px 0;
-  position: absolute;
+  /*position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0;*/
   text-align: center;
   background: #18AAF3;
   padding: 5px auto 5px;
