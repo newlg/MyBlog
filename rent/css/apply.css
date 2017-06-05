@@ -106,7 +106,7 @@ body{
   margin: 10px auto 0;
   padding-bottom: 10px;
   background: #fff;
-  height: 350px;
+  height: 319px;
 }
 .cont-box .title{
   width: 90%;
@@ -125,7 +125,7 @@ body{
 .box-list .liucheng{
 
   width: 100%;
-  height: 200px;
+  height: 300px;
   /*background-image: url('../images/liucheng.png');
   background-repeat: no-repeat;
   background-size: contain;*/
@@ -158,9 +158,9 @@ body{
   .cont-box{
     height: 240px;
   }
-.box-list .liucheng{
-  height: 300px;
-  }
+  .box-list .liucheng{
+    height: 219px;
+    }
 }
 
 @media only screen and (min-width: 414px) and (max-width: 767px) {
