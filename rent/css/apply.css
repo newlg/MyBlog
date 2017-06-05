@@ -126,11 +126,15 @@ body{
 
   width: 100%;
   height: 200px;
-  background-image: url('../images/liucheng.png');
+  /*background-image: url('../images/liucheng.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain;*/
   /*margin: 10px 0;
   padding: 277px 0 0 0px;*/
+}
+.box-list .liucheng img{
+  width: 100%;
+  height: 100%;
 }
 .apply{
   display: block;
