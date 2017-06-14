@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>守财奴抽奖活动</title>
+  <link rel="stylesheet" href="css/style-m.css">
+</head>
+<body>
+<div id="lucky_draw">
+
+  <div class="f4">
+    <img src="images/m-f4.png" alt="">
+    <div class="plate-box" :style="plateStyle"><img src="images/plate2.png" alt="转盘"></div>
+    <div class="pin"><a href="javascript:void(0);" @click="doLuckyDraw"><img src="images/pin.png" alt="指针"></a></div>
+  </div>
+  <div class="f5">
+    <img src="images/m-f5.png" alt="">
+    <div class="chance"><a href="#" style="display:block;height:20px;background:#D85444;height: 26px;width: 80%;background: rgb(216, 84, 68);margin: 0 auto;border-radius: 10px;  line-height: 26px;text-decoration:none;color: #FCDDA6;">您还有<span style="" v-cloak>{{chance}}</span>次抽奖机会</a></div>
+
+  </div>
+  <div class="f6"><img src="images/m-f6.png" alt="">
+    <table class="table-header">
+      <tr>
+        <th>中奖用户</th>
+        <th>奖品名称</th>
+      </tr>
+    </table>
+    <div class="winner-box">
+      <table class="winner-list" ref="winnerlist" v-cloak>
+        <tr v-for="(item, index) in winnerList">
+          <td>{{item.mobile}}</td>
+          <td>{{item.giftname}}</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- 抽奖结果模态框 -->
+  <div class="modal-result" v-show="msg" v-cloak>
+    <a href="javascript:void(0);" class="close" @click="msg='';init();"></a>
+    <div class="modal-result-content">
+      {{msg}}
+    </div>
+  </div>
+
+  <!--  提示框-->
+
+  <div class="tip" style="display:none;position:fixed;top:10%;z-index:9999999;">
+    <div class="tip-img" style="">
+      <img src="./images/no.png" style="width:100%"alt="">
+    </div>
+    <a href="https://m.shoucainu8.com/invest/plist" style="width:60%;display:block;margin:0 auto;"><img src="./images/touzi.png" style="width:100%;z-index:9999999"alt=""></a>
+  </div>
+
+  <!-- 登录模态框 -->
+  <!-- <div class="modal-login" v-if="member.showLogin" v-cloak>
+    <a href="javascript:void(0);" class="close" @click="member.showLogin=false">&times;</a>
+    <div class="mocal-login-content">
+      <form @keyup.enter="login">
+        <h2>登录守财奴</h2>
+        <input type="text" name="mobile" autocomplete="off" placeholder="手机号" v-model="member.loginForm.mobile">
+        <input type="password" name="password" autocomplete="off" placeholder="密码" v-model="member.loginForm.password">
+        <span class="errmsg" v-show="member.errmsg">{{member.errmsg}}</span>
+        <a class="btn-login" :class="{disabled: member.inLoginSubmit}" @click="login">登录</a>
+        <a class="btn-reg" href="/member/reg" target="_blank">注册</a>
+      </form>
+    </div>
+  </div> -->
+  <div class="modal-login" v-if="member.showLogin" v-cloak>
+    <a href="javascript:void(0);" class="close" @click="member.showLogin=false"></a>
+    <div class="layui-content">
+      <div class="register">
+        <div class="logo">
+          <img src="./images/logo.png" alt="">
+        </div>
+        <h2>登录守财奴</h2>
+
+        <form  @keyup.enter="login">
+          <input type="text" class ="user" autocomplete="off" name="mobile" value="" placeholder="手机号" v-model="member.loginForm.mobile"><br>
+          <input type="password" class ="pwd" name="password" autocomplete="off" value="" placeholder="密码" v-model="member.loginForm.password"><br>
+          <span class="errmsg" v-show="member.errmsg">{{member.errmsg}}</span>
+          <input type="button" class=" btn-login" :class="{disabled: member.inLoginSubmit}" @click="login" value="登录">
+
+          <div class="other">
+            <a href="http://m.shoucainu8.com/member/forgetpwd" class="j_layergetpwd">忘记密码</a>
+            <a href="javascript:(0)" class="j_layerline">|</a>
+            <a href="/member/reg" target="_blank"  class="j_layergetlogin btn-reg">立即注册</a>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 遮罩 -->
+  <div class="mask" v-show="msg || member.showLogin" v-cloak></div>
+  <div class="init-mask" v-if="!initialed">
+    <div class="init-tip">请稍候...</div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/alert.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/luckydraw.js"></script>
+</body>
+</html>
