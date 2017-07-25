@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images" ImageName="ico" IsPhone="false" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="list-right.png" LocationX="0" LocationY="0" />
+    <Sprite Path="shopping-cart.png" LocationX="10" LocationY="0" />
+    <Sprite Path="msg.png" LocationX="24" LocationY="0" />
+    <Sprite Path="shopping-cart2.png" LocationX="47" LocationY="0" />
+    <Sprite Path="weixin.png" LocationX="70" LocationY="0" />
+    <Sprite Path="search.png" LocationX="96" LocationY="0" />
+    <Sprite Path="recently-right.png" LocationX="41" LocationY="33" />
+    <Sprite Path="recently-left.png" LocationX="0" LocationY="33" />
+    <Sprite Path="user-info-1.png" LocationX="0" LocationY="111" />
+    <Sprite Path="user-info-2.png" LocationX="68" LocationY="111" />
+    <Sprite Path="user-info-3.png" LocationX="137" LocationY="111" />
+    <Sprite Path="yhq.png" LocationX="207" LocationY="43" />
+    <Sprite Path="success.png" LocationX="80" LocationY="28" />
+    <Sprite Path="dow.png" LocationX="123" LocationY="0" />
+    <Sprite Path="active.png" LocationX="138" LocationY="0" />
+  </SpriteList>
+</SpriteFile>
